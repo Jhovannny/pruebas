@@ -98,4 +98,13 @@ return redirect()->route('curso.show',$curso->id);
 
 
     }
+
+
+    public function delete($id){
+       $curso=CursosModel::find($id);
+
+       $curso->delete();
+return redirect()->route('curso.index');
+
+    }
 }

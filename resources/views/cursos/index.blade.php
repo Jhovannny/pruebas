@@ -18,6 +18,7 @@
 {{$curso->links()}}
 <a href="{{ route('curso.show',$item->id)}}">cursonew</a>
 
+
     
 @endforeach
 

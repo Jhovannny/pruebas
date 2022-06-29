@@ -30,3 +30,4 @@ route::put("curso.update/{curso}/",'update')->name('curso.update');
 
 route::get('cursos/{id}/edit',[CursoController::class,'edit'])->name('cursos.edit');
 
+route::delete('cursos/{id}',[CursoController::class,'delete'])->name('curso.destroy');
