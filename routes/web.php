@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CursoController;
+use App\Mail\CotactoMail;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +38,10 @@ route::delete('cursos/{id}',[CursoController::class,'delete'])->name('curso.dest
 
 route::view('nosotros','nosotros')->name('nosotros');
 route::view('welcome','welcome')->name('welcome');
+
+Route::get('contacto',function(){
+
+$correo=new CotactoMail;
+Mail::to('al221911809@gmail.com')->send($correo);
+
+});

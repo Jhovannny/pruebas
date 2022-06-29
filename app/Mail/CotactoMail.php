@@ -11,6 +11,8 @@ class CotactoMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $subject="Informacion de contacto";
+
     /**
      * Create a new message instance.
      *
@@ -28,6 +30,6 @@ class CotactoMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('email.contacto');
     }
 }
