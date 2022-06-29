@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\CursosModel;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\StoreCurso;
 class CursoController extends Controller
 {
     public function __invoke(){
@@ -18,13 +18,9 @@ class CursoController extends Controller
 
 
     }
-    public function update(Request $request,$id){
+    public function update(StoreCurso $request,$id){
 
-        $request->validate([
-'name'=>'required|max:10',
-'desc'=>'required|min:10',
-'categoria'=>'required'
-        ]);
+        
      
         $curso=CursosModel::find($id);
 $curso->name=$request->name;
@@ -55,14 +51,14 @@ return redirect()->route('curso.show',$curso->id);
         return view('cursos.show',compact('curso'));
     }
 
-    public function cursopost(Request $request){
+    public function cursopost(StoreCurso $request){
 
-        $request->validate([
+       /* $request->validate([
 
         'name'=>'required',
         'desc'=>'required',
         'categoria'=>'required'
-        ]);
+        ]);*/
 
 $curso=new CursosModel;
 
