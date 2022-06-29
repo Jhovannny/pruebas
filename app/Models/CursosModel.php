@@ -10,13 +10,16 @@ class CursosModel extends Model
     use HasFactory;
 
     protected $table='cursos';
-    protected $fiable=[
+   /*
+    protected $fillable=[
+        'id',
         'name',
-       
-        'descrition',
-        'categoria',
+         'descrition',
+        'categoria'
     ];
+    */
 
+    protected $guarded=[];
 
     
 

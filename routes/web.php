@@ -23,7 +23,7 @@ route::get("curso",'index')->name('curso.index');
 route::get("curso/create/",'create')->name('curso.create');
 route::get("curso/{id}",'show')->name('curso.show');
 route::post("cursonew",'cursopost')->name('curso.store');
-route::put("curso.update/{id}/",'update')->name('curso.update');
+route::put("curso.update/{curso}/",'update')->name('curso.update');
 
 });
 

@@ -6,7 +6,7 @@
 @section('content')
 <h1>Actualizar </h1>
 
-<form action="{{ route('curso.update' ,$curso->id)}}" method="post">
+<form action="{{ route('curso.update', $curso->id)}}" method="post">
     @csrf 
 
     @method('put')
@@ -25,9 +25,9 @@
 <label>
 Descripccion:
 
-<input name="desc" rows="5" value="{{ old('desc',$curso->descrition)}}" >
+<input name="descrition" rows="5" value="{{ old('descrition',$curso->descrition)}}" >
 </label>
-@error('desc')
+@error('descrition')
 <br>
 <small>*{{ $message}}</small>
 <br>

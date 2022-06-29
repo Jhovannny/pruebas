@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreCurso;
 class CursoController extends Controller
 {
+
+    
+      
+    
     public function __invoke(){
         return view('welcome');
     }
@@ -18,15 +22,21 @@ class CursoController extends Controller
 
 
     }
-    public function update(StoreCurso $request,$id){
+    public function update(Request $request,CursosModel $curso){
 
         
-     
+     /*
         $curso=CursosModel::find($id);
 $curso->name=$request->name;
-$curso->descrition=$request->desc;
+$curso->descrition=$request->descrition;
 $curso->categoria=$request->categoria;
 $curso->save();
+
+*/
+$curso->update($request->all());
+
+
+
  
 return redirect()->route('curso.show',$curso->id);
 
@@ -60,6 +70,8 @@ return redirect()->route('curso.show',$curso->id);
         'categoria'=>'required'
         ]);*/
 
+        /*
+
 $curso=new CursosModel;
 
 $curso->name=$request->name;
@@ -67,6 +79,20 @@ $curso->descrition=$request->desc;
 $curso->categoria=$request->categoria;
 
 $curso->save();
+
+*/
+
+/*
+$curso=CursosModel::create([
+'name'=>$request->name,
+'descrition'=>$request->descrition,
+'categoria'=>$request->categoria
+
+]);
+*/
+
+$curso=CursosModel::create($request->all());
+
 
 return redirect()->route('curso.show',$curso->id);
 

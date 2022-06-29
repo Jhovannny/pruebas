@@ -24,9 +24,9 @@
 <label>
 Descripccion:
 
-<textarea name="desc" rows="5"  value="{{old('desc')}}"></textarea>
+<textarea name="descrition" rows="5"  value="{{old('descrition')}}"></textarea>
 
-@error('desc')
+@error('descrition')
 <br>
 <small>{{ $message}}</small>
 <br>
