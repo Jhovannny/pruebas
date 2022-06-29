@@ -1,6 +1,6 @@
 @extends('layoust.plantilla')
 
-@section('title')
+@section('title',$curso->name)
 
 
 @section('content')

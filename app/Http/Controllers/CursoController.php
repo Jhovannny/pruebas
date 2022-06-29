@@ -38,7 +38,7 @@ $curso->update($request->all());
 
 
  
-return redirect()->route('curso.show',$curso->id);
+return redirect()->route('curso.show',$curso);
 
     }
 

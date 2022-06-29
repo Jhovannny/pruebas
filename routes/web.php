@@ -33,3 +33,6 @@ route::get('cursos/{id}/edit',[CursoController::class,'edit'])->name('cursos.edi
 route::delete('cursos/{id}',[CursoController::class,'delete'])->name('curso.destroy');
 
 //Route::resource('curso',CursoController::class)->parameters(['curso'=>'cursos'])->names('cursos');
+
+route::view('nosotros','nosotros')->name('nosotros');
+route::view('welcome','welcome')->name('welcome');
