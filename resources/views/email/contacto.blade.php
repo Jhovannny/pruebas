@@ -9,6 +9,10 @@
 <body>
     <h1>Correo desde laravel</h1>
     <p>Mi correo Jhovanny</p>
-    
+
+    <p><strong>Nombre:</strong>{{$contacto['name']}}</p>
+    <p><strong>Nombre:</strong>{{$contacto['correo']}}</p>
+    <p><strong>Nombre:</strong>{{$contacto['mensaje']}}</p>
+
 </body>
 </html>

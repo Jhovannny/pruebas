@@ -28,6 +28,7 @@
                 <li><a href="{{ route('welcome')}}" class="{{ request()->routeIs('welcome') ? 'active' : ''}}">Inicio</a></li>
                 <li><a href="{{ route('curso.index')}}" class="{{ request()->routeIs('curso.*') ? 'active' : ''}}">Curso</a></li>
                 <li><a href="{{ route('nosotros')}}" class="{{ request()->routeIs('nosotros') ? 'active' : ''}}">Nosotros</a></li>
+                <li><a href="{{ route('contacto.index')}}" class="{{ request()->routeIs('contacto.index') ? 'active' : ''}}">contacto</a></li>
 
             </u>
         </nav>
